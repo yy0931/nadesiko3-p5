@@ -42,10 +42,18 @@ if (!window.p5ScriptTag) {
         p.setup = window.p5Setup
         p.draw = window.p5Draw
     }
+    const start = function() {
+        if (document.getElementById('runbox')) {
+            new p5(s, 'runbox')
+        } else {
+            new p5(s)
+        }
+    }
+
     if (window.p5ScriptTag.readyState === 'complete') {
-        new p5(s)
+        start()
     } else {
-        window.p5ScriptTag.addEventListener('load', () => { new p5(s) })
+        window.p5ScriptTag.addEventListener('load', function() { start })
     }
     』をJS実行
 ここまで
@@ -83,5 +91,5 @@ if (!window.p5ScriptTag) {
 ここまで
 
 ●（左、上、幅、高さで）長方形描画とは
-    A+Bを戻す
+    「window.p5Instance.rect({左をJSONエンコード}, {上をJSONエンコード}, {幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行
 ここまで
