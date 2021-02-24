@@ -1,0 +1,19 @@
+●（強度の）灰色とは
+    『(function (c) { return window.p5Instance.color(c) })』を[強度]でJS関数実行して戻す
+ここまで
+
+●（赤と緑と青の）RGB色とは
+    『(function (r, g, b) { return window.p5Instance.color(r, g, b) })』を[赤, 緑, 青]でJS関数実行して戻す
+ここまで
+
+●（赤と緑と青と不透明度の）RGBA色とは
+    『(function (r, g, b, a) { return window.p5Instance.color(r, g, b, a) })』を[赤, 緑, 青, 不透明度]でJS関数実行して戻す
+ここまで
+
+●（文字列の）色文字列パースとは
+    『(function (c) { return window.p5Instance.color(c) })』を[文字列]でJS関数実行して戻す
+ここまで
+
+●（色1と色2を割合で）色線形補間とは
+    『(function (from, to, amount) { return window.p5Instance.lerpColor(from, to, amount) })』を[色1, 色2, 割合]でJS関数実行して戻す
+ここまで

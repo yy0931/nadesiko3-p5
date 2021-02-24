@@ -3,32 +3,364 @@
 // documentが既に読み込み終わっているときinstance mode用のp5オブジェクトしか生成されない。
 if (!window.p5ScriptTag) {
     window.p5ScriptTag = document.createElement('script')
-    window.p5ScriptTag.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
+    window.p5ScriptTa
+    g.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
     window.p5ScriptTag.setAttribute('integrity', 'sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==')
     window.p5ScriptTag.setAttribute('crossorigin', 'anonymous')
     document.head.appendChild(window.p5ScriptTag)
 }
 』をJS実行
 
-●（セットアップで）p5セットアップ時とは
-    『(function(setup) {
-        window.p5Setup = setup
-    })』をセットアップでJS関数実行
-    もし「!!window.p5Draw」をJS実行ならば
-        _p5開始
-    ここまで
+●（強度の）灰色とは
+    『(function (c) { return window.p5Instance.color(c) })』を[強度]でJS関数実行して戻す
 ここまで
 
-●（描画で）p5描画時とは
-    『(function(draw) {
-        window.p5Draw = draw
-    })』を描画でJS関数実行
-    もし「!!window.p5Setup」をJS実行ならば
-        _p5開始
-    ここまで
+●（赤と緑と青の）RGB色とは
+    『(function (r, g, b) { return window.p5Instance.color(r, g, b) })』を[赤, 緑, 青]でJS関数実行して戻す
 ここまで
 
-/** @private */
+●（赤と緑と青と不透明度の）RGBA色とは
+    『(function (r, g, b, a) { return window.p5Instance.color(r, g, b, a) })』を[赤, 緑, 青, 不透明度]でJS関数実行して戻す
+ここまで
+
+●（文字列の）色文字列パースとは
+    『(function (c) { return window.p5Instance.color(c) })』を[文字列]でJS関数実行して戻す
+ここまで
+
+●（色1と色2を割合で）色線形補間とは
+    『(function (from, to, amount) { return window.p5Instance.lerpColor(from, to, amount) })』を[色1, 色2, 割合]でJS関数実行して戻す
+ここまで
+
+●（色の）青成分とは
+    『(function (c) { return window.p5Instance.blue(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）緑成分とは
+    『(function (c) { return window.p5Instance.green(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）赤成分とは
+    『(function (c) { return window.p5Instance.red(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）不透明度成分とは
+    『(function (c) { return window.p5Instance.alpha(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）明度とは
+    『(function (c) { return window.p5Instance.brightness(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）輝度とは
+    『(function (c) { return window.p5Instance.lightness(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）色相とは
+    『(function (c) { return window.p5Instance.hue(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色の）彩度とは
+    『(function (c) { return window.p5Instance.saturation(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+
+●（色で）背景色設定とは
+    『(function (c) { return window.p5Instance.background(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●キャンバスクリアとは
+    『(function () { return window.p5Instance.clear() })』をJS実行して戻す
+ここまで
+
+●（色に|色で）境界色設定とは
+    『(function (c) { return window.p5Instance.stroke(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色に|色で）塗りつぶし色設定とは
+    『(function (c) { return window.p5Instance.fill(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●塗りつぶし色消去とは
+    『(function () { return window.p5Instance.noFill() })』をJS実行して戻す
+ここまで
+
+●境界色消去とは
+    『(function () { return window.p5Instance.noStroke() })』をJS実行して戻す
+ここまで
+
+// TODO: clearMode, erase, noErase
+
+●マウス移動量横とは
+    「window.p5Instance.movedX」をJS実行して戻す
+ここまで
+
+●マウス移動量縦とは
+    「window.p5Instance.movedY」をJS実行して戻す
+ここまで
+
+●マウス横とは
+    「window.p5Instance.mouseX」をJS実行して戻す
+ここまで
+
+●マウス縦とは
+    「window.p5Instance.mouseY」をJS実行して戻す
+ここまで
+
+●前フレームマウス横とは
+    「window.p5Instance.pmouseX」をJS実行して戻す
+ここまで
+
+●前フレームマウス縦とは
+    「window.p5Instance.pmouseY」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準マウス横とは
+    「window.p5Instance.winMouseX」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準マウス縦とは
+    「window.p5Instance.winMouseY」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準前フレームマウス横とは
+    「window.p5Instance.pwinMouseX」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準前フレームマウス縦とは
+    「window.p5Instance.pwinMouseY」をJS実行して戻す
+ここまで
+
+// 左クリック、中クリック、右クリックで返す値が異なる。
+●マウス押下中種類とは
+    「window.p5Instance.mouseButton」をJS実行して戻す
+ここまで
+
+●マウス押下中とは
+    「window.p5Instance.mouseIsPressed」をJS実行して戻す
+ここまで
+
+●（処理で）マウス移動時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseMoved', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスドラッグ時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseDragged', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウス押下時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mousePressed', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウス離した時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseReleased', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスクリック時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseClicked', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）ダブルクリック時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'doubleClicked', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスホイール回転時とは
+    // TODO: event.deltaで回転量を取得できる
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseWheel', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●マウスポインター固定とは
+    「window.p5Instance.requestPointerLock()」をJS実行して戻す
+ここまで
+
+●マウスポインター固定解除とは
+    「window.p5Instance.exitPointerLock()」をJS実行して戻す
+ここまで
+
+●（左と上と幅と高さと開始角度と終了角度の|終了角で）円弧描画とは
+    『(function (x, y, w, h, start, end) { return window.p5Instance.arc(x, y, w, h, start, end) })』を[左, 上, 幅, 高さ, 開始角度, 終了角度]でJS関数実行して戻す
+ここまで
+
+●（左と上と幅と高さの|高さで）楕円描画とは
+    『(function (x, y, w, h) { return window.p5Instance.ellipse(x, y, w, h) })』を[左, 上, 幅, 高さ]でJS関数実行して戻す
+ここまで
+
+●（左と上と直径の|直径で）円描画とは
+    『(function (x, y, d) { return window.p5Instance.circle(x, y, d) })』を[左, 上, 直径]でJS関数実行して戻す
+ここまで
+
+●（点1xと点1yと点2xと点2yの|点2yで）線描画とは
+    『(function (x1, y1, x2, y2) { return window.p5Instance.line(x1, y1, x2, y2) })』を[点1x, 点1y, 点2x, 点2y]でJS関数実行して戻す
+ここまで
+
+●（xとyの|yで）点描画とは
+    『(function (x, y) { return window.p5Instance.point(x, y) })』を[x, y]でJS関数実行して戻す
+ここまで
+
+●（xとyの|yで）点描画とは
+    『(function (x, y) { return window.p5Instance.point(x, y) })』を[x, y]でJS関数実行して戻す
+ここまで
+
+●（点1xと点1yと点2xと点2yと点3xと点3yと点4xと点4yの|点4yで）四辺形描画とは
+    『(function (x1, y1, x2, y2, x3, y3, x4, y4) { return window.p5Instance.quad(x1, y1, x2, y2, x3, y3, x4, y4) })』を[点1x, 点1y, 点2x, 点2y, 点3x, 点3y, 点4x, 点4y]でJS関数実行して戻す
+ここまで
+
+●（左と上と幅と高さの|高さで）長方形描画とは
+    『(function (x, y, w, h) { return window.p5Instance.rect(x, y, w, h) })』を[左, 上, 幅, 高さ]でJS関数実行して戻す
+ここまで
+
+●（左と上と大きさの|大きさで）四角形描画とは
+    『(function (x, y, size) { return window.p5Instance.square(x, y, size) })』を[左, 上, 大きさ]でJS関数実行して戻す
+ここまで
+
+●（点1xと点1yと点2xと点2yと点3xと点3yの|点3yで）四辺形描画とは
+    『(function (x1, y1, x2, y2, x3, y3) { return window.p5Instance.triangle(x1, y1, x2, y2, x3, y3) })』を[点1x, 点1y, 点2x, 点2y, 点3x, 点3y]でJS関数実行して戻す
+ここまで
+
+// TODO:
+// - arcの引数mode
+// - 3dのline, point
+// - rect、squareのoptionalな引数
+
+●（幅に）境界線幅設定とは
+    『(function (w) { return window.p5Instance.strokeWeight(w) })』を[幅]でJS関数実行して戻す
+ここまで
+
+// TODO
+
+●キャンバス文字左寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.LEFT)」をJS実行
+ここまで
+●キャンバス文字中央寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.CENTER)」をJS実行
+ここまで
+●キャンバス文字右寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.RIGHT)」をJS実行
+ここまで
+
+●（サイズで）キャンバス文字サイズ設定とは
+    『(function (x) { return window.p5Instance.textSize(x) })』を[サイズ]でJS関数実行して戻す
+ここまで
+
+
+// TODO:
+// - textAlignの第二引数
+// - textLeading
+// - textStyle
+// - textWidth
+// - textAscent
+// - textDescent
+
+●（フォントURLを|フォントURLで）フォント読み込みとは
+    『(function (x) { return window.p5Instance.loadFont(x) })』を[フォントURL]でJS関数実行して戻す
+ここまで
+
+●（文字列を横と縦に|縦で）文字列描画とは
+    『(function (text, x, y) { return window.p5Instance.text(text, x, y) })』を[文字列, 横, 縦]でJS関数実行して戻す
+ここまで
+
+●（フォント名に|フォント名で）キャンバスフォント設定とは
+    『(function (fontName) { return window.p5Instance.textFont(fontName) })』を[フォント名]でJS関数実行して戻す
+ここまで
+
+// TODO: textの他の引数
+
+●フレームカウントとは
+    『window.p5Instance.frameCount』をJS実行して戻す
+ここまで
+
+●フレーム間隔とは
+    『window.p5Instance.deltaTime』をJS実行して戻す
+ここまで
+
+●フォーカス有無とは
+    『window.p5Instance.focused』をJS実行して戻す
+ここまで
+
+●（形状に）カーソル形状設定とは
+    『(function (type) { return window.p5Instance.cursor(type) })』を[形状]でJS関数実行して戻す
+ここまで
+
+●カーソル非表示とは
+    『window.p5Instance.noCursor()』をJS実行して戻す
+ここまで
+
+●（fpsに）フレームレート設定とは
+    『(function (fps) { return window.p5Instance.frameRate(fps) })』を[fps]でJS関数実行して戻す
+ここまで
+
+●フレームレート取得とは
+    『window.p5Instance.frameRate()』をJS実行して戻す
+ここまで
+
+●（幅と高さの）キャンバス作成とは
+    「window.p5Instance.createCanvas({幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行して戻す
+ここまで
+
+●ディスプレイ高さとは
+    「window.p5Instance.displayHeight」をJS実行して戻す
+ここまで
+
+●ディスプレイ幅とは
+    「window.p5Instance.displayWidth」をJS実行して戻す
+ここまで
+
+●ウィンドウ高さとは
+    「window.p5Instance.windowHeight」をJS実行して戻す
+ここまで
+
+●ウィンドウ幅とは
+    「window.p5Instance.windowWidth」をJS実行して戻す
+ここまで
+
+●キャンバス高さとは
+    「window.p5Instance.height」をJS実行して戻す
+ここまで
+
+●キャンバス幅とは
+    「window.p5Instance.width」をJS実行して戻す
+ここまで
+
+●（処理で）ウィンドウリサイズ時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'windowResized', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●全画面化とは
+    『(function() { return window.p5Instance.fullscreen(true) })』をJS実行して戻す
+ここまで
+
+●全画面化解除とは
+    『(function() { return window.p5Instance.fullscreen(false) })』をJS実行して戻す
+ここまで
+
+●（値に）描画密度設定とは
+    『(function(v) { return window.p5Instance.pixelDensity(v) })』を[値]でJS関数実行して戻す
+ここまで
+
+●描画密度取得とは
+    『window.p5Instance.pixelDensity()』をJS実行して戻す
+ここまで
+
+●ディスプレイ密度取得とは
+    『window.p5Instance.displayDensity()』をJS実行して戻す
+ここまで
+
+●URL取得とは
+    『window.p5Instance.getURL()』をJS実行して戻す
+ここまで
+
+●URLパス取得とは
+    『window.p5Instance.getURLPath()』をJS実行して戻す
+ここまで
+
+●URLパラメータとは
+    『window.p5Instance.getURLParams()』をJS実行して戻す
+ここまで
+
+// TODO: 引数なしの fullscreen()
+
+『window.p5EventListeners = []』をJS実行
+
+// setupとdrawが両方セットされたときに自動的に実行される。
 ●_p5開始とは
     『
     const s = function(p) {
@@ -43,6 +375,11 @@ if (!window.p5ScriptTag) {
         p.draw = window.p5Draw
         window.p5Setup = undefined
         window.p5Draw = undefined
+
+        for (let i = 0; i < window.p5EventListeners.length; i++) {
+            p[window.p5EventListeners[i].key] = window.p5EventListeners[i].fn
+        }
+        window.p5EventListeners.length = 0
     }
     const start = function() {
         if (document.getElementById('runbox')) {
@@ -61,38 +398,47 @@ if (!window.p5ScriptTag) {
     』をJS実行
 ここまで
 
-●（幅、高さの）キャンバス作成とは
-    「window.p5Instance.createCanvas({幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行
+●（セットアップで）p5セットアップ時とは
+    『(function(setup) {
+        window.p5Setup = setup
+    })』を[セットアップ]でJS関数実行
+    もし「!!window.p5Draw」をJS実行ならば
+        _p5開始
+    ここまで
 ここまで
 
-●（色で）背景描画とは
-    「window.p5Instance.background{色をJSONエンコード}」をJS実行
+●（描画で）p5描画時とは
+    『(function(draw) {
+        window.p5Draw = draw
+    })』を[描画]でJS関数実行
+    もし「!!window.p5Setup」をJS実行ならば
+        _p5開始
+    ここまで
 ここまで
 
-●（左と、上と、幅と、高さの|高さで）楕円描画とは
-    「window.p5Instance.ellipse({左をJSONエンコード}, {上をJSONエンコード}, {幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行
+●（処理で）p5セットアップ前とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'preload', fn }) })』を[処理]でJS関数実行
 ここまで
 
-●マウス横とは
-    「window.p5Instance.mouseX」をJS実行して戻す
+●キャンバス削除とは
+    『window.p5Instance.remove()』をJS実行
 ここまで
 
-●マウス縦とは
-    「window.p5Instance.mouseY」をJS実行して戻す
+●ループ停止とは
+    『window.p5Instance.noLoop()』をJS実行
 ここまで
 
-●マウス押下中とは
-    「window.p5Instance.mouseIsPressed」をJS実行して戻す
+●ループ再開とは
+    『window.p5Instance.loop()』をJS実行
 ここまで
 
-●（色に|色で）塗りつぶし色設定とは
-    「window.p5Instance.fill({色をJSONエンコード})」をJS実行して戻す
+●ループ中とは
+    『window.p5Instance.isLooping()』をJS実行
 ここまで
 
-●（色で）背景描画とは
-    「window.p5Instance.background({色をJSONエンコード})」をJS実行
+●再描画とは
+    『window.p5Instance.redraw()』をJS実行
 ここまで
 
-●（左、上、幅、高さで）長方形描画とは
-    「window.p5Instance.rect({左をJSONエンコード}, {上をJSONエンコード}, {幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行
-ここまで
+// TODO: push, pop
+

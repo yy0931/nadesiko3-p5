@@ -1,0 +1,93 @@
+●フレームカウントとは
+    『window.p5Instance.frameCount』をJS実行して戻す
+ここまで
+
+●フレーム間隔とは
+    『window.p5Instance.deltaTime』をJS実行して戻す
+ここまで
+
+●フォーカス有無とは
+    『window.p5Instance.focused』をJS実行して戻す
+ここまで
+
+●（形状に）カーソル形状設定とは
+    『(function (type) { return window.p5Instance.cursor(type) })』を[形状]でJS関数実行して戻す
+ここまで
+
+●カーソル非表示とは
+    『window.p5Instance.noCursor()』をJS実行して戻す
+ここまで
+
+●（fpsに）フレームレート設定とは
+    『(function (fps) { return window.p5Instance.frameRate(fps) })』を[fps]でJS関数実行して戻す
+ここまで
+
+●フレームレート取得とは
+    『window.p5Instance.frameRate()』をJS実行して戻す
+ここまで
+
+●（幅と高さの）キャンバス作成とは
+    「window.p5Instance.createCanvas({幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行して戻す
+ここまで
+
+●ディスプレイ高さとは
+    「window.p5Instance.displayHeight」をJS実行して戻す
+ここまで
+
+●ディスプレイ幅とは
+    「window.p5Instance.displayWidth」をJS実行して戻す
+ここまで
+
+●ウィンドウ高さとは
+    「window.p5Instance.windowHeight」をJS実行して戻す
+ここまで
+
+●ウィンドウ幅とは
+    「window.p5Instance.windowWidth」をJS実行して戻す
+ここまで
+
+●キャンバス高さとは
+    「window.p5Instance.height」をJS実行して戻す
+ここまで
+
+●キャンバス幅とは
+    「window.p5Instance.width」をJS実行して戻す
+ここまで
+
+●（処理で）ウィンドウリサイズ時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'windowResized', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●全画面化とは
+    『(function() { return window.p5Instance.fullscreen(true) })』をJS実行して戻す
+ここまで
+
+●全画面化解除とは
+    『(function() { return window.p5Instance.fullscreen(false) })』をJS実行して戻す
+ここまで
+
+●（値に）描画密度設定とは
+    『(function(v) { return window.p5Instance.pixelDensity(v) })』を[値]でJS関数実行して戻す
+ここまで
+
+●描画密度取得とは
+    『window.p5Instance.pixelDensity()』をJS実行して戻す
+ここまで
+
+●ディスプレイ密度取得とは
+    『window.p5Instance.displayDensity()』をJS実行して戻す
+ここまで
+
+●URL取得とは
+    『window.p5Instance.getURL()』をJS実行して戻す
+ここまで
+
+●URLパス取得とは
+    『window.p5Instance.getURLPath()』をJS実行して戻す
+ここまで
+
+●URLパラメータとは
+    『window.p5Instance.getURLParams()』をJS実行して戻す
+ここまで
+
+// TODO: 引数なしの fullscreen()

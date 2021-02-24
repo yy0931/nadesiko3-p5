@@ -1,0 +1,83 @@
+『window.p5EventListeners = []』をJS実行
+
+// setupとdrawが両方セットされたときに自動的に実行される。
+●_p5開始とは
+    『
+    const s = function(p) {
+        if (!window.p5Setup) {
+            throw new Error('セットアップ処理が設定されていません。')
+        }
+        if (!window.p5Draw) {
+            throw new Error('描画処理が設定されていません。')
+        }
+        window.p5Instance = p
+        p.setup = window.p5Setup
+        p.draw = window.p5Draw
+        window.p5Setup = undefined
+        window.p5Draw = undefined
+
+        for (let i = 0; i < window.p5EventListeners.length; i++) {
+            p[window.p5EventListeners[i].key] = window.p5EventListeners[i].fn
+        }
+        window.p5EventListeners.length = 0
+    }
+    const start = function() {
+        if (document.getElementById('runbox')) {
+            new p5(s, 'runbox')
+        } else {
+        
+            new p5(s)
+        }
+    }
+
+    if (window.p5) {
+        start()
+    } else {
+        window.p5ScriptTag.addEventListener('load', start)
+    }
+    』をJS実行
+ここまで
+
+●（セットアップで）p5セットアップ時とは
+    『(function(setup) {
+        window.p5Setup = setup
+    })』を[セットアップ]でJS関数実行
+    もし「!!window.p5Draw」をJS実行ならば
+        _p5開始
+    ここまで
+ここまで
+
+●（描画で）p5描画時とは
+    『(function(draw) {
+        window.p5Draw = draw
+    })』を[描画]でJS関数実行
+    もし「!!window.p5Setup」をJS実行ならば
+        _p5開始
+    ここまで
+ここまで
+
+●（処理で）p5セットアップ前とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'preload', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●キャンバス削除とは
+    『window.p5Instance.remove()』をJS実行
+ここまで
+
+●ループ停止とは
+    『window.p5Instance.noLoop()』をJS実行
+ここまで
+
+●ループ再開とは
+    『window.p5Instance.loop()』をJS実行
+ここまで
+
+●ループ中とは
+    『window.p5Instance.isLooping()』をJS実行
+ここまで
+
+●再描画とは
+    『window.p5Instance.redraw()』をJS実行
+ここまで
+
+// TODO: push, pop

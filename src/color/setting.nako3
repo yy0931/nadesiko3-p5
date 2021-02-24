@@ -1,0 +1,25 @@
+●（色で）背景色設定とは
+    『(function (c) { return window.p5Instance.background(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●キャンバスクリアとは
+    『(function () { return window.p5Instance.clear() })』をJS実行して戻す
+ここまで
+
+●（色に|色で）境界色設定とは
+    『(function (c) { return window.p5Instance.stroke(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●（色に|色で）塗りつぶし色設定とは
+    『(function (c) { return window.p5Instance.fill(c) })』を[色]でJS関数実行して戻す
+ここまで
+
+●塗りつぶし色消去とは
+    『(function () { return window.p5Instance.noFill() })』をJS実行して戻す
+ここまで
+
+●境界色消去とは
+    『(function () { return window.p5Instance.noStroke() })』をJS実行して戻す
+ここまで
+
+// TODO: clearMode, erase, noErase

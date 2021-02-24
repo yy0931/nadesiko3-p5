@@ -1,0 +1,85 @@
+●マウス移動量横とは
+    「window.p5Instance.movedX」をJS実行して戻す
+ここまで
+
+●マウス移動量縦とは
+    「window.p5Instance.movedY」をJS実行して戻す
+ここまで
+
+●マウス横とは
+    「window.p5Instance.mouseX」をJS実行して戻す
+ここまで
+
+●マウス縦とは
+    「window.p5Instance.mouseY」をJS実行して戻す
+ここまで
+
+●前フレームマウス横とは
+    「window.p5Instance.pmouseX」をJS実行して戻す
+ここまで
+
+●前フレームマウス縦とは
+    「window.p5Instance.pmouseY」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準マウス横とは
+    「window.p5Instance.winMouseX」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準マウス縦とは
+    「window.p5Instance.winMouseY」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準前フレームマウス横とは
+    「window.p5Instance.pwinMouseX」をJS実行して戻す
+ここまで
+
+●ウィンドウ基準前フレームマウス縦とは
+    「window.p5Instance.pwinMouseY」をJS実行して戻す
+ここまで
+
+// 左クリック、中クリック、右クリックで返す値が異なる。
+●マウス押下中種類とは
+    「window.p5Instance.mouseButton」をJS実行して戻す
+ここまで
+
+●マウス押下中とは
+    「window.p5Instance.mouseIsPressed」をJS実行して戻す
+ここまで
+
+●（処理で）マウス移動時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseMoved', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスドラッグ時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseDragged', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウス押下時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mousePressed', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウス離した時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseReleased', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスクリック時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseClicked', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）ダブルクリック時とは
+    『(function(fn) { window.p5EventListeners.push({ key: 'doubleClicked', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●（処理で）マウスホイール回転時とは
+    // TODO: event.deltaで回転量を取得できる
+    『(function(fn) { window.p5EventListeners.push({ key: 'mouseWheel', fn }) })』を[処理]でJS関数実行
+ここまで
+
+●マウスポインター固定とは
+    「window.p5Instance.requestPointerLock()」をJS実行して戻す
+ここまで
+
+●マウスポインター固定解除とは
+    「window.p5Instance.exitPointerLock()」をJS実行して戻す
+ここまで

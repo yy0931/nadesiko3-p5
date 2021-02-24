@@ -1,0 +1,22 @@
+●キャンバス文字左寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.LEFT)」をJS実行
+ここまで
+●キャンバス文字中央寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.CENTER)」をJS実行
+ここまで
+●キャンバス文字右寄せとは
+    「window.p5Instance.textAlign(window.p5Instance.RIGHT)」をJS実行
+ここまで
+
+●（サイズで）キャンバス文字サイズ設定とは
+    『(function (x) { return window.p5Instance.textSize(x) })』を[サイズ]でJS関数実行して戻す
+ここまで
+
+
+// TODO:
+// - textAlignの第二引数
+// - textLeading
+// - textStyle
+// - textWidth
+// - textAscent
+// - textDescent
