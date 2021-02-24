@@ -1,85 +1,105 @@
+/// マウスの移動量の横成分を取得する。
 ●マウス移動量横とは
     「window.p5Instance.movedX」をJS実行して戻す
 ここまで
 
+/// マウスの移動量の縦成分を取得する。
 ●マウス移動量縦とは
     「window.p5Instance.movedY」をJS実行して戻す
 ここまで
 
+/// マウス位置の横成分を取得する。
 ●マウス横とは
     「window.p5Instance.mouseX」をJS実行して戻す
 ここまで
 
+/// マウス位置の縦成分を取得する。
 ●マウス縦とは
     「window.p5Instance.mouseY」をJS実行して戻す
 ここまで
 
+/// 1つ前のフレームのときのマウス位置の横成分を取得する。
 ●前フレームマウス横とは
     「window.p5Instance.pmouseX」をJS実行して戻す
 ここまで
 
+/// 1つ前のフレームのときのマウス位置の縦成分を取得する。
 ●前フレームマウス縦とは
     「window.p5Instance.pmouseY」をJS実行して戻す
 ここまで
 
+///
 ●ウィンドウ基準マウス横とは
     「window.p5Instance.winMouseX」をJS実行して戻す
 ここまで
 
+///
 ●ウィンドウ基準マウス縦とは
     「window.p5Instance.winMouseY」をJS実行して戻す
 ここまで
 
+///
 ●ウィンドウ基準前フレームマウス横とは
     「window.p5Instance.pwinMouseX」をJS実行して戻す
 ここまで
 
+///
 ●ウィンドウ基準前フレームマウス縦とは
     「window.p5Instance.pwinMouseY」をJS実行して戻す
 ここまで
 
-// 左クリック、中クリック、右クリックで返す値が異なる。
+/// マウスが押されているかどうかを取得する。左クリック、中クリック、右クリックで返す値が異なる。
 ●マウス押下中種類とは
     「window.p5Instance.mouseButton」をJS実行して戻す
 ここまで
 
+/// マウスが押されているかどうかを取得する。
 ●マウス押下中とは
     「window.p5Instance.mouseIsPressed」をJS実行して戻す
 ここまで
 
+/// マウスが移動したときに実行する処理を設定する。
 ●（処理で）マウス移動時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseMoved', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスをドラッグしたときに実行する処理を設定する。
 ●（処理で）マウスドラッグ時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseDragged', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスボタンを押したときに実行する処理を設定する。
 ●（処理で）マウス押下時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mousePressed', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスボタンを離したときに実行する処理を設定する。
 ●（処理で）マウス離した時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseReleased', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスクリックしたときに実行する処理を設定する。
 ●（処理で）マウスクリック時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseClicked', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// ダブルクリックしたときに実行する処理を設定する。
 ●（処理で）ダブルクリック時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'doubleClicked', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスホイールが回転したときに実行する処理を設定する。
 ●（処理で）マウスホイール回転時とは
     // TODO: event.deltaで回転量を取得できる
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseWheel', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// マウスポインターを固定する。
 ●マウスポインター固定とは
     「window.p5Instance.requestPointerLock()」をJS実行して戻す
 ここまで
 
+/// マウスポインターの固定を解除する。
 ●マウスポインター固定解除とは
     「window.p5Instance.exitPointerLock()」をJS実行して戻す
 ここまで

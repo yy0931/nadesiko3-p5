@@ -1,3 +1,4 @@
+/// 図形を描画するときの境界線の太さを設定する。
 ●（幅に）境界線幅設定とは
     『(function (w) { return window.p5Instance.strokeWeight(w) })』を[幅]でJS関数実行して戻す
 ここまで

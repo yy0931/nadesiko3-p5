@@ -1,91 +1,114 @@
+/// 描画処理が何回呼び出されたかのカウントを取得する。
 ●フレームカウントとは
     『window.p5Instance.frameCount』をJS実行して戻す
 ここまで
 
+/// 前回の描画処理の呼び出しから経った時間を取得する。
 ●フレーム間隔とは
     『window.p5Instance.deltaTime』をJS実行して戻す
 ここまで
 
+/// キャンバスがフォーカスされているかどうかを取得する。
 ●フォーカス有無とは
     『window.p5Instance.focused』をJS実行して戻す
 ここまで
 
+/// カーソルの形状を設定する。文字列「pointer」、「progress」、「wait」などを指定できる。元に戻すには「auto」を設定する。
 ●（形状に）カーソル形状設定とは
     『(function (type) { return window.p5Instance.cursor(type) })』を[形状]でJS関数実行して戻す
 ここまで
 
+/// カーソルを非表示にする。
 ●カーソル非表示とは
     『window.p5Instance.noCursor()』をJS実行して戻す
 ここまで
 
+/// 描画処理が実行される間隔を、1秒あたりに呼び出される回数（フレームレート）で指定する。
 ●（fpsに）フレームレート設定とは
     『(function (fps) { return window.p5Instance.frameRate(fps) })』を[fps]でJS関数実行して戻す
 ここまで
 
+/// 現在のフレームレートを取得する。
 ●フレームレート取得とは
     『window.p5Instance.frameRate()』をJS実行して戻す
 ここまで
 
+/// キャンバスを作成する。
 ●（幅|幅と高さの）キャンバス作成とは
     『(function (w, h) { return window.p5Instance.createCanvas(w, h) } )』を[幅, 高さ]でJS関数実行して戻す
 ここまで
 
+/// ディスプレイの高さを取得する。
 ●ディスプレイ高さとは
     「window.p5Instance.displayHeight」をJS実行して戻す
 ここまで
 
+/// ディスプレイの幅を取得する。
 ●ディスプレイ幅とは
     「window.p5Instance.displayWidth」をJS実行して戻す
 ここまで
 
+/// ウィンドウの高さを取得する。
 ●ウィンドウ高さとは
     「window.p5Instance.windowHeight」をJS実行して戻す
 ここまで
 
+/// ウィンドウの幅を取得する。
 ●ウィンドウ幅とは
     「window.p5Instance.windowWidth」をJS実行して戻す
 ここまで
 
+/// キャンバスの高さを取得する。
 ●キャンバス高さとは
     「window.p5Instance.height」をJS実行して戻す
 ここまで
 
+/// キャンバスの幅を取得する。
 ●キャンバス幅とは
     「window.p5Instance.width」をJS実行して戻す
 ここまで
 
+/// ウィンドウがリサイズされたときに呼ばれる処理を設定する。
 ●（処理で）ウィンドウリサイズ時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'windowResized', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// キャンバスを全画面で表示する。
 ●全画面化とは
     『(function() { return window.p5Instance.fullscreen(true) })』をJS実行して戻す
 ここまで
 
+/// キャンバスの全画面化を解除する。
 ●全画面化解除とは
     『(function() { return window.p5Instance.fullscreen(false) })』をJS実行して戻す
 ここまで
 
+/// キャンバスの描画密度を設定する。デフォルトではディスプレイ密度によって自動的に設定される。
 ●（値に）描画密度設定とは
     『(function(v) { return window.p5Instance.pixelDensity(v) })』を[値]でJS関数実行して戻す
 ここまで
 
+/// キャンバスの現在の描画密度を取得する。
 ●描画密度取得とは
     『window.p5Instance.pixelDensity()』をJS実行して戻す
 ここまで
 
+/// ディスプレイ密度を取得する。
 ●ディスプレイ密度取得とは
     『window.p5Instance.displayDensity()』をJS実行して戻す
 ここまで
 
+/// 現在のページのURLを取得する。
 ●URL取得とは
     『window.p5Instance.getURL()』をJS実行して戻す
 ここまで
 
+/// 現在のページのURLのパスを配列で取得する。
 ●URLパス取得とは
     『window.p5Instance.getURLPath()』をJS実行して戻す
 ここまで
 
+/// 現在のページのURLパラメータを取得する。
 ●URLパラメータとは
     『window.p5Instance.getURLParams()』をJS実行して戻す
 ここまで

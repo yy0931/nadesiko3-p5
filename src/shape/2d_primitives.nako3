@@ -1,40 +1,45 @@
+/// 円弧を描画する。
 ●（左と上と幅と高さと開始角度と終了角度の|終了角で）円弧描画とは
     『(function (x, y, w, h, start, end) { return window.p5Instance.arc(x, y, w, h, start, end) })』を[左, 上, 幅, 高さ, 開始角度, 終了角度]でJS関数実行して戻す
 ここまで
 
+/// 楕円を描画する。
 ●（左と上と幅と高さの|高さで）楕円描画とは
     『(function (x, y, w, h) { return window.p5Instance.ellipse(x, y, w, h) })』を[左, 上, 幅, 高さ]でJS関数実行して戻す
 ここまで
 
+/// 円を描画する。
 ●（左と上と直径の|直径で）円描画とは
     『(function (x, y, d) { return window.p5Instance.circle(x, y, d) })』を[左, 上, 直径]でJS関数実行して戻す
 ここまで
 
+/// 線を描画する。
 ●（点1xと点1yと点2xと点2yの|点2yで）線描画とは
     『(function (x1, y1, x2, y2) { return window.p5Instance.line(x1, y1, x2, y2) })』を[点1x, 点1y, 点2x, 点2y]でJS関数実行して戻す
 ここまで
 
+/// 点を描画する。
 ●（xとyの|yで）点描画とは
     『(function (x, y) { return window.p5Instance.point(x, y) })』を[x, y]でJS関数実行して戻す
 ここまで
 
-●（xとyの|yで）点描画とは
-    『(function (x, y) { return window.p5Instance.point(x, y) })』を[x, y]でJS関数実行して戻す
-ここまで
-
+/// 四辺形を描画する。
 ●（点1xと点1yと点2xと点2yと点3xと点3yと点4xと点4yの|点4yで）四辺形描画とは
     『(function (x1, y1, x2, y2, x3, y3, x4, y4) { return window.p5Instance.quad(x1, y1, x2, y2, x3, y3, x4, y4) })』を[点1x, 点1y, 点2x, 点2y, 点3x, 点3y, 点4x, 点4y]でJS関数実行して戻す
 ここまで
 
+/// 長方形を描画する。
 ●（左と上と幅と高さの|高さで）長方形描画とは
     『(function (x, y, w, h) { return window.p5Instance.rect(x, y, w, h) })』を[左, 上, 幅, 高さ]でJS関数実行して戻す
 ここまで
 
+/// 四角形を描画する。
 ●（左と上と大きさの|大きさで）四角形描画とは
     『(function (x, y, size) { return window.p5Instance.square(x, y, size) })』を[左, 上, 大きさ]でJS関数実行して戻す
 ここまで
 
-●（点1xと点1yと点2xと点2yと点3xと点3yの|点3yで）四辺形描画とは
+/// 三角形を描画する。
+●（点1xと点1yと点2xと点2yと点3xと点3yの|点3yで）三角形描画とは
     『(function (x1, y1, x2, y2, x3, y3) { return window.p5Instance.triangle(x1, y1, x2, y2, x3, y3) })』を[点1x, 点1y, 点2x, 点2y, 点3x, 点3y]でJS関数実行して戻す
 ここまで
 

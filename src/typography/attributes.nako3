@@ -1,13 +1,17 @@
+/// キャンバスに描画する文字を左寄せにする。
 ●キャンバス文字左寄せとは
     「window.p5Instance.textAlign(window.p5Instance.LEFT)」をJS実行
 ここまで
+/// キャンバスに描画する文字を中央寄せにする。
 ●キャンバス文字中央寄せとは
     「window.p5Instance.textAlign(window.p5Instance.CENTER)」をJS実行
 ここまで
+/// キャンバスに描画する文字を右寄せにする。
 ●キャンバス文字右寄せとは
     「window.p5Instance.textAlign(window.p5Instance.RIGHT)」をJS実行
 ここまで
 
+/// キャンバスに描画する文字の大きさを設定する。
 ●（サイズで）キャンバス文字サイズ設定とは
     『(function (x) { return window.p5Instance.textSize(x) })』を[サイズ]でJS関数実行して戻す
 ここまで

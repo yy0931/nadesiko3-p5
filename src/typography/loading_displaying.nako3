@@ -1,11 +1,14 @@
+/// キャンバスに描画するためのフォントをURLを指定して読み込む。
 ●（フォントURLを|フォントURLで）フォント読み込みとは
     『(function (x) { return window.p5Instance.loadFont(x) })』を[フォントURL]でJS関数実行して戻す
 ここまで
 
+/// キャンバスに文字列を描画する。
 ●（文字列を横と縦に|縦で）文字列描画とは
     『(function (text, x, y) { return window.p5Instance.text(text, x, y) })』を[文字列, 横, 縦]でJS関数実行して戻す
 ここまで
 
+/// キャンバスに描画する文字列のフォントを設定する。
 ●（フォント名に|フォント名で）キャンバスフォント設定とは
     『(function (fontName) { return window.p5Instance.textFont(fontName) })』を[フォント名]でJS関数実行して戻す
 ここまで

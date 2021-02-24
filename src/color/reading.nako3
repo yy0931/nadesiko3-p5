@@ -1,31 +1,39 @@
+/// 色の青成分を取得する。
 ●（色の）青成分とは
     『(function (c) { return window.p5Instance.blue(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の緑成分を取得する。
 ●（色の）緑成分とは
     『(function (c) { return window.p5Instance.green(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の赤成分を取得する。
 ●（色の）赤成分とは
     『(function (c) { return window.p5Instance.red(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の不透明度成分を取得する。
 ●（色の）不透明度成分とは
     『(function (c) { return window.p5Instance.alpha(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の明度を取得する。
 ●（色の）明度とは
     『(function (c) { return window.p5Instance.brightness(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の輝度を取得する。
 ●（色の）輝度とは
     『(function (c) { return window.p5Instance.lightness(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の色相を取得する。
 ●（色の）色相とは
     『(function (c) { return window.p5Instance.hue(c) })』を[色]でJS関数実行して戻す
 ここまで
 
+/// 色の彩度を取得する。
 ●（色の）彩度とは
     『(function (c) { return window.p5Instance.saturation(c) })』を[色]でJS関数実行して戻す
 ここまで

@@ -38,6 +38,7 @@
     』をJS実行
 ここまで
 
+/// 最初に一度だけ実行する処理を設定する。
 ●（セットアップで）p5セットアップ時とは
     『(function(setup) {
         window.p5Setup = setup
@@ -47,6 +48,7 @@
     ここまで
 ここまで
 
+/// 繰り返し実行する描画処理を設定する。
 ●（描画で）p5描画時とは
     『(function(draw) {
         window.p5Draw = draw
@@ -56,26 +58,32 @@
     ここまで
 ここまで
 
+/// セットアップ処理の前に行う、画像の読み込みなどの処理を設定する。
 ●（処理で）p5セットアップ前とは
     『(function(fn) { window.p5EventListeners.push({ key: 'preload', fn }) })』を[処理]でJS関数実行
 ここまで
 
+/// キャンバスを削除する。
 ●キャンバス削除とは
     『window.p5Instance.remove()』をJS実行
 ここまで
 
+/// 描画処理の繰り返し実行を停止する。
 ●ループ停止とは
     『window.p5Instance.noLoop()』をJS実行
 ここまで
 
+/// 描画処理の繰り返し実行を再開する。
 ●ループ再開とは
     『window.p5Instance.loop()』をJS実行
 ここまで
 
+/// 描画処理が繰り返し実行されているかどうかを取得する。
 ●ループ中とは
     『window.p5Instance.isLooping()』をJS実行
 ここまで
 
+/// 描画処理を一度だけ実行する。
 ●再描画とは
     『window.p5Instance.redraw()』をJS実行
 ここまで
