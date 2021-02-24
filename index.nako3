@@ -43,8 +43,9 @@ if (!window.p5ScriptTag) {
         p.draw = window.p5Draw
     }
     const start = function() {
-        if (document.getElementById('runbox')) {
-            new p5(s, 'runbox')
+        const container = document.getElementById('runbox')
+        if (container) {
+            new p5(s, container)
         } else {
             new p5(s)
         }
@@ -53,7 +54,7 @@ if (!window.p5ScriptTag) {
     if (window.p5ScriptTag.readyState === 'complete') {
         start()
     } else {
-        window.p5ScriptTag.addEventListener('load', function() { start })
+        window.p5ScriptTag.addEventListener('load', start)
     }
     』をJS実行
 ここまで
