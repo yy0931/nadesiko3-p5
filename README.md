@@ -1,5 +1,5 @@
 ```
-！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.3/index.nako3」を取り込む
+！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.4/index.nako3」を取り込む
 
 p5セットアップ時には
     400、400のキャンバス作成
@@ -29,5 +29,5 @@ p5描画時には
 』
 
 // ライブラリを取り込む（バージョン 3.1.18用）
-『(function(code) { fetch('https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.3/index.nako3').then((res) => res.text()).then((lib) => { navigator.nako3.runReset(lib + code, 'main.nako3', lib) }) })』をcodeでJS関数実行
+『(function(code) { fetch('https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.4/index.nako3').then((res) => res.text()).then((lib) => { navigator.nako3.runReset(lib + code, 'main.nako3', lib) }) })』をcodeでJS関数実行
 ```

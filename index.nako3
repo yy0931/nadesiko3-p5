@@ -41,17 +41,19 @@ if (!window.p5ScriptTag) {
         window.p5Instance = p
         p.setup = window.p5Setup
         p.draw = window.p5Draw
+        window.p5Setup = undefined
+        window.p5Draw = undefined
     }
     const start = function() {
-        const container = document.getElementById('runbox')
-        if (container) {
-            new p5(s, container)
+        if (document.getElementById('runbox')) {
+            new p5(s, 'runbox')
         } else {
+        
             new p5(s)
         }
     }
 
-    if (window.p5ScriptTag.readyState === 'complete') {
+    if (window.p5) {
         start()
     } else {
         window.p5ScriptTag.addEventListener('load', start)
