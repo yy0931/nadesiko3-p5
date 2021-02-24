@@ -39,3 +39,7 @@ p5描画時には
 // ライブラリを取り込む（バージョン 3.1.18用）
 『(function(code) { fetch('https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.7/index.nako3').then((res) => res.text()).then((lib) => { navigator.nako3.runReset(lib + code, 'main.nako3', lib) }) })』をcodeでJS関数実行
 ```
+
+---
+
+ドキュメント（作成中）https://yy0931.github.io/nadesiko3-p5/index.nako3.html
