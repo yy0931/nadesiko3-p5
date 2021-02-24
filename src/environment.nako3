@@ -26,8 +26,8 @@
     『window.p5Instance.frameRate()』をJS実行して戻す
 ここまで
 
-●（幅と高さの）キャンバス作成とは
-    「window.p5Instance.createCanvas({幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行して戻す
+●（幅|幅と高さの）キャンバス作成とは
+    『(function (w, h) { return window.p5Instance.createCanvas(w, h) } )』を[幅, 高さ]でJS関数実行して戻す
 ここまで
 
 ●ディスプレイ高さとは

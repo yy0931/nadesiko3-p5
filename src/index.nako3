@@ -3,8 +3,7 @@
 // documentが既に読み込み終わっているときinstance mode用のp5オブジェクトしか生成されない。
 if (!window.p5ScriptTag) {
     window.p5ScriptTag = document.createElement('script')
-    window.p5ScriptTa
-    g.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
+    window.p5ScriptTag.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
     window.p5ScriptTag.setAttribute('integrity', 'sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==')
     window.p5ScriptTag.setAttribute('crossorigin', 'anonymous')
     document.head.appendChild(window.p5ScriptTag)

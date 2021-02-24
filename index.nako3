@@ -3,8 +3,7 @@
 // documentが既に読み込み終わっているときinstance mode用のp5オブジェクトしか生成されない。
 if (!window.p5ScriptTag) {
     window.p5ScriptTag = document.createElement('script')
-    window.p5ScriptTa
-    g.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
+    window.p5ScriptTag.setAttribute('src', 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js')
     window.p5ScriptTag.setAttribute('integrity', 'sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ==')
     window.p5ScriptTag.setAttribute('crossorigin', 'anonymous')
     document.head.appendChild(window.p5ScriptTag)
@@ -64,7 +63,7 @@ if (!window.p5ScriptTag) {
 ここまで
 
 
-●（色で）背景色設定とは
+●（色に|色で）背景色設定とは
     『(function (c) { return window.p5Instance.background(c) })』を[色]でJS関数実行して戻す
 ここまで
 
@@ -292,8 +291,8 @@ if (!window.p5ScriptTag) {
     『window.p5Instance.frameRate()』をJS実行して戻す
 ここまで
 
-●（幅と高さの）キャンバス作成とは
-    「window.p5Instance.createCanvas({幅をJSONエンコード}, {高さをJSONエンコード})」をJS実行して戻す
+●（幅|幅と高さの）キャンバス作成とは
+    『(function (w, h) { return window.p5Instance.createCanvas(w, h) } )』を[幅, 高さ]でJS関数実行して戻す
 ここまで
 
 ●ディスプレイ高さとは
