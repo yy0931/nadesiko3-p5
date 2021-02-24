@@ -1,5 +1,3 @@
-# nadesiko3-p5
-
 ```
 ！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.1/index.nako3」を取り込む
 
