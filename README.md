@@ -37,7 +37,7 @@ p5描画時には
 ここまで
 』
 
-// p5.jsのライブラリ (https://github.com/yy0931/nadesiko3-p5) を取り込む（バージョン 3.1.18用）
+// 取り込み文を使えない環境でp5.jsのライブラリ (https://github.com/yy0931/nadesiko3-p5) を直接取り込む（バージョン 3.1.18用）
 『(function(code) { fetch('https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.7/index.nako3').then((res) => res.text()).then((lib) => { navigator.nako3.runReset(lib + code, 'main.nako3', lib) }) })』をcodeでJS関数実行
 ```
 
