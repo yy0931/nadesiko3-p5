@@ -1,4 +1,5 @@
 ```
+// https://github.com/yy0931/nadesiko3-p5
 ！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.7/index.nako3」を取り込む
 
 p5セットアップ時には
@@ -36,7 +37,7 @@ p5描画時には
 ここまで
 』
 
-// ライブラリを取り込む（バージョン 3.1.18用）
+// p5.jsのライブラリ (https://github.com/yy0931/nadesiko3-p5) を取り込む（バージョン 3.1.18用）
 『(function(code) { fetch('https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.7/index.nako3').then((res) => res.text()).then((lib) => { navigator.nako3.runReset(lib + code, 'main.nako3', lib) }) })』をcodeでJS関数実行
 ```
 
