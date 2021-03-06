@@ -2,7 +2,7 @@
 
 ```
 // https://github.com/yy0931/nadesiko3-p5
-！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.8/index.nako3」を取り込む
+！「https://raw.githubusercontent.com/yy0931/nadesiko3-p5/v0.0.9/index.nako3」を取り込む
 
 p5セットアップ時には
     400、400のキャンバス作成
