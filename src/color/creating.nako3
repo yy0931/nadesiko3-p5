@@ -1,5 +1,5 @@
 /// 強度を指定して灰色を作成する。
-●（強度の）灰色とは
+●（強度の）p5灰色とは
     『(function (c) { return window.p5Instance.color(c) })』を[強度]でJS関数実行して戻す
 ここまで
 

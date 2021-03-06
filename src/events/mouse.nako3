@@ -59,7 +59,7 @@
 ここまで
 
 /// マウスが移動したときに実行する処理を設定する。
-●（処理で）マウス移動時とは
+●（処理で）p5マウス移動時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseMoved', fn }) })』を[処理]でJS関数実行
 ここまで
 
@@ -74,7 +74,7 @@
 ここまで
 
 /// マウスボタンを離したときに実行する処理を設定する。
-●（処理で）マウス離した時とは
+●（処理で）p5マウス離した時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseReleased', fn }) })』を[処理]でJS関数実行
 ここまで
 

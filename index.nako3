@@ -11,7 +11,7 @@ if (!window.p5ScriptTag) {
 』をJS実行
 
 /// 強度を指定して灰色を作成する。
-●（強度の）灰色とは
+●（強度の）p5灰色とは
     『(function (c) { return window.p5Instance.color(c) })』を[強度]でJS関数実行して戻す
 ここまで
 
@@ -92,12 +92,12 @@ if (!window.p5ScriptTag) {
 ここまで
 
 /// 図形を描画するときの塗りつぶしに使う色を設定する。
-●（色に|色で）塗りつぶし色設定とは
+●（色に|色で）p5塗りつぶし色設定とは
     『(function (c) { return window.p5Instance.fill(c) })』を[色]でJS関数実行して戻す
 ここまで
 
 /// 図形を塗りつぶさずに描画するよう設定する。
-●塗りつぶし色消去とは
+●p5塗りつぶし色消去とは
     『(function () { return window.p5Instance.noFill() })』をJS実行して戻す
 ここまで
 
@@ -169,7 +169,7 @@ if (!window.p5ScriptTag) {
 ここまで
 
 /// マウスが移動したときに実行する処理を設定する。
-●（処理で）マウス移動時とは
+●（処理で）p5マウス移動時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseMoved', fn }) })』を[処理]でJS関数実行
 ここまで
 
@@ -184,7 +184,7 @@ if (!window.p5ScriptTag) {
 ここまで
 
 /// マウスボタンを離したときに実行する処理を設定する。
-●（処理で）マウス離した時とは
+●（処理で）p5マウス離した時とは
     『(function(fn) { window.p5EventListeners.push({ key: 'mouseReleased', fn }) })』を[処理]でJS関数実行
 ここまで
 
@@ -220,17 +220,17 @@ if (!window.p5ScriptTag) {
 ここまで
 
 /// 楕円を描画する。
-●（左と上と幅と高さの|高さで）楕円描画とは
+●（左と上と幅と高さの|高さで）p5楕円描画とは
     『(function (x, y, w, h) { return window.p5Instance.ellipse(x, y, w, h) })』を[左, 上, 幅, 高さ]でJS関数実行して戻す
 ここまで
 
 /// 円を描画する。
-●（左と上と直径の|直径で）円描画とは
+●（左と上と直径の|直径で）p5円描画とは
     『(function (x, y, d) { return window.p5Instance.circle(x, y, d) })』を[左, 上, 直径]でJS関数実行して戻す
 ここまで
 
 /// 線を描画する。
-●（点1xと点1yと点2xと点2yの|点2yで）線描画とは
+●（点1xと点1yと点2xと点2yの|点2yで）p5線描画とは
     『(function (x1, y1, x2, y2) { return window.p5Instance.line(x1, y1, x2, y2) })』を[点1x, 点1y, 点2x, 点2y]でJS関数実行して戻す
 ここまで
 

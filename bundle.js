@@ -14,9 +14,34 @@ const files = [
     './src/structure.nako3',
 ]
 
-let result = ''
+let outNako = ''
+let outHTML = `\
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>`
+
 for (const f of files) {
-    result += fs.readFileSync(f).toString() + '\n'
+    const content = fs.readFileSync(f).toString()
+    outNako += content + '\n'
+    const lines = content.split('\n')
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('///')) {
+            const matches = /^●(（[^）]*）)?(.*?)(?:とは)?$/.exec(lines[i + 1])
+            outHTML += `<li>${matches[1] || ''}<strong>${matches[2]}</strong><br>${lines[i].slice(3).trimLeft()}</li>\n`
+        }
+    }
 }
 
-fs.writeFileSync('index.nako3', result)
+outHTML += `</ul>
+</body>
+</html>`
+
+fs.writeFileSync('index.nako3', outNako)
+fs.writeFileSync('index.nako3.html', outHTML)
